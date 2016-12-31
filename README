@@ -1,0 +1,8 @@
+this is queens, a Golang n queens calculator 
+
+run it with 
+
+queens -h for  help
+queens -s -n=12 to calculate the n=12 case
+queens -n=12 for all solutions from n=4 to n=12
+
