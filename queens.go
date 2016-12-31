@@ -1,9 +1,9 @@
 package main
 
-/* n queens solver by Moshe Bar Dec 31 2016
+/* n queens solver by moshix Bar Dec 31 2016
    orignally programmed in PL/1 back in 1982
    on an IDF mainframe. Ported to Golang in Dec 2016
-   Copyright 2016 by Moshe Bar
+   Copyright 2016 by moshix
 
    Program source is under Apache license             */
 

@@ -20,6 +20,6 @@ queens is written in Golang 1.7 and runs fine on any *nix system. It uses backtr
 
 It doesn't yet use Golang parallel features for multi-core machines, but it will soon. 
 
-Enjoy
+Enjoy!
 
-Moshix
+moshix
