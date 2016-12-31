@@ -139,7 +139,9 @@ func place(ps int64) int64 {
 
 func queen(n int64) {
 	/* in this function we backtrack the queens on the chess board, while checking for
-	   a valid queen positioning */
+	   a valid queen positioning
+
+           This is the CPU intensive loop                                                */
 	var k int64 = 1
 	a[k] = 0
 	for k > 0 {

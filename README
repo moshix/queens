@@ -1,8 +1,25 @@
 this is queens, a Golang n queens calculator 
 
-run it with 
+BUILD IT
+--------
+
+Assuming your golang environment is properly set up, it's as easy as:
+go build queens.go
+
+
+RUN IT
+------
+
+Run it with 
 
 queens -h for  help
 queens -s -n=12 to calculate the n=12 case
 queens -n=12 for all solutions from n=4 to n=12
 
+queens is written in Golang 1.7 and runs fine on any *nix system. It uses backtracking to find queens. 
+
+It doesn't yet use Golang parallel features for multi-core machines, but it will soon. 
+
+Enjoy
+
+Moshix
