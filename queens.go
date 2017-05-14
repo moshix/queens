@@ -1,6 +1,6 @@
 package main
 
-/* n queens solver by moshix Bar Dec 31 2016
+/* n queens solver by moshix  Dec 31 2016
    orignally programmed in PL/1 back in 1982
    on an IDF mainframe. Ported to Golang in Dec 2016
    Copyright 2016 by moshix
@@ -15,7 +15,7 @@ import (
 )
 
 /* global variables */
-var a [28]int64
+var a [30]int64
 var count int64
 
 /* the below validate the command line flags passed
@@ -58,7 +58,7 @@ func main() {
 	helpPtr := flag.Bool("h", false, "show help dialogue")
 	flag.Parse()
 	if *helpPtr {
-		fmt.Println("Usage:   ")
+		fmt.Println("Usage example:   ")
 		fmt.Println("queens -h -s -n=14")
 		fmt.Println(" ")
 		fmt.Println("-h         show this help         ")
@@ -67,7 +67,7 @@ func main() {
 		fmt.Println("Smallest n value is 4. Highest practical value as of 2016 is 27 for supercomputers")
 		fmt.Println("World record as of 2016 is n=26. More info http://penguin.ewu.edu/~trolfe/SCCS-95/SCCS-95.html")
 		fmt.Println(" ")
-		fmt.Println("queens is written by Moshe Bar in Go, derived from his original 1982 work in MVS PL/I")
+		fmt.Println("queens is written by Moshix in Go, derived from his original 1982 work in MVS PL/I")
 		fmt.Println(" ")
 		return
 	}
@@ -139,9 +139,9 @@ func place(ps int64) int64 {
 
 func queen(n int64) {
 	/* in this function we backtrack the queens on the chess board, while checking for
-	   a valid queen positioning
+		   a valid queen positioning
 
-           This is the CPU intensive loop                                                */
+	           This is the CPU intensive loop                                                */
 	var k int64 = 1
 	a[k] = 0
 	for k > 0 {
