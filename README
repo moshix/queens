@@ -2,7 +2,7 @@ this is queens, a Golang n queens calculator
 
 BUILD IT
 --------
-
+<iframe src="https://discord.com/widget?id=423767742546575361&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 Assuming your golang environment is properly set up, it's as easy as:
 go build queens.go
 
