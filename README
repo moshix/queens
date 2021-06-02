@@ -2,7 +2,7 @@
 <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
 <a href="codenotary.com"><img src="https://raw.githubusercontent.com/moshix/mvs/master/secured-by-immudb.svg" width="130px;"/></a>
 
-this is queens, a Golang n queens calculator 
+#this is queens, a Golang n queens calculator 
 
 BUILD IT
 --------
