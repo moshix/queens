@@ -1,0 +1,63 @@
+//HERC01   JOB 1,CLASS=A,MSGCLASS=X,REGION=2048K,NOTIFY=HERC01
+//*
+//*
+//NQUEEN   EXEC FORTVCLG
+//SYSPRINT DD SYSOUT=*
+//FORT.SYSIN DD *
+@PROCESS FIXED LANGLVL(77)
+C THIS ONE IMPLEMENTS DEPTH-FIRST BACKTRACKING.
+C SEE THE 2ND PROGRAM FOR SCHEME ON THE "PERMUTATIONS" PAGE FOR THE
+C MAIN IDEA.
+C AS IS, THE PROGRAM ONLY PRINTS THE NUMBER OF N-QUEENS CONFIGURATIONS.
+C TO PRINT ALSO THE CONFIGURATIONS, UNCOMMENT THE LINE AFTER LABEL 80.  00050000
+      PROGRAM QUEENS                                                    00060000
+      IMPLICIT INTEGER(A-Z)                                             00070000
+      PARAMETER(L=13)                                                   00080000
+      DIMENSION A(L),S(L),U(4*L-2)                                      00090000
+      DO 10 I=1,L                                                       00100000
+   10 A(I)=I                                                            00110000
+      DO 20 I=1,4*L-2                                                   00120000
+   20 U(I)=0                                                            00130000
+      DO 110 N=1,L                                                      00140000
+      M=0                                                               00150000
+      I=1                                                               00160000
+      R=2*N-1                                                           00170000
+      GO TO 40                                                          00180000
+   30 S(I)=J                                                            00190000
+      U(P)=1                                                            00200000
+      U(Q+R)=1                                                          00210000
+      I=I+1                                                             00220000
+   40 IF(I.GT.N) GO TO 80                                               00230000
+      J=I                                                               00240000
+   50 Z=A(I)                                                            00250000
+      Y=A(J)                                                            00260000
+      P=I-Y+N                                                           00270000
+      Q=I+Y-1                                                           00280000
+      A(I)=Y                                                            00290000
+      A(J)=Z                                                            00300000
+      IF((U(P).EQ.0).AND.(U(Q+R).EQ.0)) GOTO 30                         00310000
+   60 J=J+1                                                             00320000
+      IF(J.LE.N) GO TO 50                                               00330000
+   70 J=J-1                                                             00340000
+      IF(J.EQ.I) GO TO 90                                               00350000
+      Z=A(I)                                                            00360000
+      A(I)=A(J)                                                         00370000
+      A(J)=Z                                                            00380000
+      GO TO 70                                                          00390000
+   80 M=M+1                                                             00400000
+C     PRINT *,(A(K),K=1,N)                                              00410000
+   90 I=I-1                                                             00420000
+      IF(I.EQ.0) GO TO 100                                              00430000
+      P=I-A(I)+N                                                        00440000
+      Q=I+A(I)-1                                                        00450000
+      J=S(I)                                                            00460000
+      U(P)=0                                                            00470000
+      U(Q+R)=0                                                          00480000
+      GO TO 60                                                          00490000
+  100 PRINT *,N,M                                                       00500000
+  110 CONTINUE                                                          00510000
+      END                                                               00520000
+/*
+//GO.SYSPRINT DD SYSOUT=*,DCB=(RECFM=FBA,LRECL=166,BLKSIZE=16600)
+//GO.FT06F001 DD SYSOUT=*,DCB=(RECFM=FBA,LRECL=166,BLKSIZE=16600)
+//
