@@ -21,9 +21,7 @@
 
 
 <br>
-<h1>
-<b>n queens Solvers</b></h1>
-<br>
+
 
 BUILD THE GOLANG VERSION
 ------------------------
