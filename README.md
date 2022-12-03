@@ -45,10 +45,10 @@ queens is written in Golang 1.7 and runs fine on any *nix system. It uses backtr
 It doesn't yet use Golang parallel features for multi-core machines, but it will soon. 
 
 
-ALL OTHER VERSION
------------------
+ALL OTHER VERSIONS
+------------------
 
-Run eihter in MVS 3.8 TK4- or obtain the correct compilers. 
+Run either in MVS 3.8 TK4- or obtain the correct compilers. 
 
 <br><br>
 Enjoy!  
