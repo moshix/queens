@@ -11,6 +11,8 @@
 <br>
 <b>IBM PL/I Optimizing Compiler</b>
 <br>
+<b>IBM Algol68 Compiler</b>
+<br>
 
 
 <br>
@@ -36,6 +38,7 @@ queens is written in Golang 1.7 and runs fine on any *nix system. It uses backtr
 
 It doesn't yet use Golang parallel features for multi-core machines, but it will soon. 
 
-Enjoy!
+Enjoy!  
 
-moshix
+moshix  
+Dec 2022 / Kitzbuhel
