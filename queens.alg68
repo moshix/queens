@@ -1,0 +1,47 @@
+COMMENT
+
+This is coded in Algol68 and uses 
+ back tracking (instead of recursion). 
+ 
+ You will find that Algol68 can be quite fast with 
+  the right compiler.
+COMMENT
+
+PR quiet regression PR
+
+CO n queens in classic backtracker CO
+
+BEGIN
+
+   INT rank = 8;
+   printf (($"Rank="g(0)l$, rank));
+   [1 : rank] CCOL column, INT sols found := 0;
+
+   PROC place from  = (CROW this row) VOID:
+        IF this row > rank
+        THEN sols found +:= 1;
+CO           FOR row TO rank
+             DO print(("abcdefghijklmnopqrstuvwxyz"[row], whole(column[row], 0), " "))
+             OD; 
+             print ((sols found MOD 4 = 0 | new line | "  ")) CO
+        ELSE FOR i TO rank
+             DO IF BOOL safe := TRUE;
+                   FOR j TO this row - 1 
+                   WHILE safe
+                   DO safe := safe AND NOT (column[j] = i ORF (column[j] - i = this row - j ORF column[j] - i = j - this row))
+                   OD;
+                   safe
+                THEN column[this row] := i;
+                     place from (this row + 1)
+                FI
+             OD
+        FI;
+             
+   place from (1);
+
+   print (sols found);
+   MODE CROW = INT, CCOL = INT;
+
+   SKIP
+
+END
