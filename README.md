@@ -21,7 +21,8 @@
 
 
 <br>
-<b>A Golang n queens calculator</b>
+<h1>
+<b>n queens Solvers</b></h1>
 <br>
 
 BUILD IT
