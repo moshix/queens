@@ -25,8 +25,8 @@
 <b>n queens Solvers</b></h1>
 <br>
 
-BUILD IT
---------
+BUILD THE GOLANG VERSION
+------------------------
 Assuming your golang environment is properly set up, it's as easy as:
 go build queens.go
 
@@ -44,6 +44,13 @@ queens is written in Golang 1.7 and runs fine on any *nix system. It uses backtr
 
 It doesn't yet use Golang parallel features for multi-core machines, but it will soon. 
 
+
+ALL OTHER VERSION
+-----------------
+
+Run eihter in MVS 3.8 TK4- or obtain the correct compilers. 
+
+<br><br>
 Enjoy!  
 
 moshix  
