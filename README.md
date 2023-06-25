@@ -46,7 +46,7 @@ It doesn't yet use Golang parallel features for multi-core machines, but it will
 ALL OTHER VERSIONS
 ------------------
 
-Run either in MVS 3.8 TK4- or obtain the correct compilers. 
+Run either in MVS 3.8 TK4- or obtain the correct compilers. The algol68 compiler is among my GH repos. 
 
 <br><br>
 Enjoy!  
