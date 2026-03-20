@@ -54,4 +54,4 @@ Run either in MVS 3.8 TK4- or obtain the correct compilers. The algol68 compiler
 Enjoy!  
 
 moshix  
-June 2024 / Firenze
+March 2026 / Barolo
